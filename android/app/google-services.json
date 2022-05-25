@@ -1,0 +1,39 @@
+{
+    "project_info": {
+        "project_number": "110852039949",
+        "project_id": "appallodocteurplus",
+        "storage_bucket": "appallodocteurplus.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:110852039949:android:8916d02beaf78d0cbbfc44",
+            "android_client_info": {
+                "package_name": "com.creative.appallodocteurplus"
+            }
+        },
+        "oauth_client": [{
+            "client_id": "110852039949-7r2cnm015jt2ntqhihr0dg4ghqj04o2q.apps.googleusercontent.com",
+            "client_type": 3
+        }],
+        "api_key": [{
+            "current_key": "AIzaSyD-eII8PVPmpD6yCCPhzbEDzxNSJwqpGfo"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": [{
+                        "client_id": "110852039949-7r2cnm015jt2ntqhihr0dg4ghqj04o2q.apps.googleusercontent.com",
+                        "client_type": 3
+                    },
+                    {
+                        "client_id": "110852039949-362pthr54gj7qker0fldukna5emldbn1.apps.googleusercontent.com",
+                        "client_type": 2,
+                        "ios_info": {
+                            "bundle_id": "com.example.appAlloDocteurPlus"
+                        }
+                    }
+                ]
+            }
+        }
+    }],
+    "configuration_version": "1"
+}
