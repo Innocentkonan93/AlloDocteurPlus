@@ -66,9 +66,7 @@ class _PharmacieScreenState extends State<PharmacieScreen> {
     return actualUserAdress!;
   }
 
-  void onChanged(String query){
-
-  }
+  void onChanged(String query) {}
 
   @override
   void initState() {
@@ -88,7 +86,7 @@ class _PharmacieScreenState extends State<PharmacieScreen> {
     // print(userContry);
 
     final programmeController = Provider.of<ProgrammeController>(context);
-  
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -175,49 +173,34 @@ class _PharmacieScreenState extends State<PharmacieScreen> {
                                     contentPadding:
                                         EdgeInsets.fromLTRB(5, 10, 0, 10),
                                   ),
-                                  onChanged: (String? val) {
-                                    print(val!);
+                                  onChanged: (String? query) {
+                                    print(query!);
                                     setState(() {
                                       suggestionList = pharmacieList
-                                          .where((pharmacie) => pharmacie
-                                              .adressePharmacie!
-                                              .toLowerCase()
-                                              .contains(val.toLowerCase()))
+                                          .where((pharmacie) =>
+                                              pharmacie.nomPharmacie!
+                                                  .toLowerCase()
+                                                  .contains(
+                                                    query.toLowerCase(),
+                                                  ) ||
+                                              pharmacie.villePharmacie!
+                                                  .toLowerCase()
+                                                  .contains(
+                                                    query.toLowerCase(),
+                                                  ) ||
+                                              pharmacie.quartierPharmacie!
+                                                  .toLowerCase()
+                                                  .contains(
+                                                    query.toLowerCase(),
+                                                  ) ||
+                                              pharmacie.adressePharmacie!
+                                                  .toLowerCase()
+                                                  .contains(
+                                                    query.toLowerCase(),
+                                                  ))
                                           .toList();
                                     });
-                                    if (suggestionList.isEmpty) {
-                                      setState(() {
-                                        suggestionList = pharmacieList
-                                            .where(
-                                              (pharmacie) => pharmacie
-                                                  .nomPharmacie!
-                                                  .toLowerCase()
-                                                  .contains(val.toLowerCase()),
-                                            )
-                                            .toList();
-                                      });
-                                      if (suggestionList.isEmpty) {
-                                        setState(() {
-                                          suggestionList = pharmacieList
-                                              .where((pharmacie) => pharmacie
-                                                  .villePharmacie!
-                                                  .toLowerCase()
-                                                  .contains(val.toLowerCase()))
-                                              .toList();
-                                        });
-                                      }
 
-                                      if (suggestionList.isEmpty) {
-                                        setState(() {
-                                          suggestionList = pharmacieList
-                                              .where((pharmacie) => pharmacie
-                                                  .quartierPharmacie!
-                                                  .toLowerCase()
-                                                  .contains(val.toLowerCase()))
-                                              .toList();
-                                        });
-                                      }
-                                    }
                                     print(suggestionList);
                                   },
                                 ),

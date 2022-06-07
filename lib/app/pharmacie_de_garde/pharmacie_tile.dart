@@ -121,7 +121,8 @@ class _PharmacieTileState extends State<PharmacieTile> {
                                     open.isBefore(now) && close.isAfter(now)
                                         ? 'Ouvert'
                                         : 'Fermée',
-                                    style: close.isAfter(now)
+                                    style:
+                                        open.isBefore(now) && close.isAfter(now)
                                         ? openStyle
                                         : closeStyle,
                                   )

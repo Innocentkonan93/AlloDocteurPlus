@@ -723,18 +723,20 @@ class _HomeMenuWidgetState extends State<HomeMenuWidget> {
                                                 ),
                                               ),
                                               SizedBox(height: 5),
-                                              Text(
-                                                '${departement.departementService}'
-                                                    .capitalizeFirst
-                                                    .toString(),
-                                                style: GoogleFonts.quicksand(
-                                                  fontWeight: FontWeight.w500,
-                                                  fontSize: 13,
+                                              Flexible(
+                                                child: Text(
+                                                  '${departement.departementService}'
+                                                      .capitalizeFirst
+                                                      .toString(),
+                                                  style: GoogleFonts.quicksand(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 13,
+                                                  ),
+                                                  overflow: TextOverflow.clip,
+                                                  softWrap: true,
+                                                  textAlign: TextAlign.center,
+                                                  maxLines: 2,
                                                 ),
-                                                overflow: TextOverflow.clip,
-                                                softWrap: true,
-                                                textAlign: TextAlign.center,
-                                                maxLines: 2,
                                               )
                                             ],
                                           ),

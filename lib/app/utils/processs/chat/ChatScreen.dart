@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'package:chatview/chatview.dart';
-
 import '../../../../data/controllers/UserDemandeController.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -396,24 +394,7 @@ class _ChatScreenState extends State<ChatScreen> {
     final patientController = Provider.of<UsersController>(context);
     final currentPatient = patientController.listUsers
         .where((patient) => patient.emailUtilisateur == widget.emailUser);
-    List<Message> messageList = [
-      Message(
-        id: '1',
-        message: "Hi",
-        createdAt: DateTime.now(),
-        sendBy: "1",
-      ),
-      Message(
-        id: '2',
-        message: "Hello",
-        createdAt: DateTime.now().add(Duration(seconds: 10)),
-        sendBy: "2",
-      ),
-    ];
-    final chatController = ChatController(
-      initialMessageList: messageList,
-      scrollController: ScrollController(),
-    );
+   
     //
     return patientController.isProcessing &&
             consultationController.isProcessing &&
