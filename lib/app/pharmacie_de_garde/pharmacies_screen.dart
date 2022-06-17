@@ -236,19 +236,20 @@ class _PharmacieScreenState extends State<PharmacieScreen> {
               )
             : Center(
                 child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: CircularProgressIndicator.adaptive(),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text('Chargement ....'),
-                ],
-              )),
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator.adaptive(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Chargement ....'),
+                  ],
+                ),
+              ),
       ),
     );
   }
